@@ -16,6 +16,7 @@ ENV_VARS = [
     "JIRA_STORY_POINTS_FIELD",
     "JIRA_SPRINT_FIELD",
     "JIRA_FLAGGED_FIELD",
+    "JIRA_DEMO_PROJECT",
     "LLM_API_KEY",
     "LLM_MODEL_MAIN",
     "LLM_MODEL_FAST",
@@ -51,15 +52,18 @@ def test_defaults() -> None:
     assert settings.jira_story_points_field == "customfield_10016"
     assert settings.jira_sprint_field == "customfield_10020"
     assert settings.jira_flagged_field == "customfield_10021"
+    assert settings.jira_demo_project == "SHOP"
 
 
 def test_reads_from_env(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("JIRA_MODE", "real")
     monkeypatch.setenv("JIRA_API_TOKEN", SECRET)
     monkeypatch.setenv("JIRA_STORY_POINTS_FIELD", "customfield_10028")
+    monkeypatch.setenv("JIRA_DEMO_PROJECT", "DEMO")
     settings = make_settings()
     assert settings.jira_mode == "real"
     assert settings.jira_story_points_field == "customfield_10028"
+    assert settings.jira_demo_project == "DEMO"
     assert settings.jira_api_token.get_secret_value() == SECRET
 
 

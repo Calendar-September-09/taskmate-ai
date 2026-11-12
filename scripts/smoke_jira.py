@@ -1,13 +1,13 @@
 """Kiểm tra nhanh kết nối Jira thật. CHỈ ĐỌC: không tạo, sửa hay xóa gì trên Jira.
 
 Chạy: JIRA_MODE=real trong .env, rồi
-    uv run python -m scripts.smoke_jira [PROJECT_KEY]   (mặc định SHOP)
+    uv run python -m scripts.smoke_jira [PROJECT_KEY]   (mặc định JIRA_DEMO_PROJECT trong .env)
 """
 
 import asyncio
 import sys
 
-from core.settings import get_settings
+from core.settings import Settings, get_settings
 from mcp_server.errors import JiraError
 from mcp_server.factory import get_jira
 from mcp_server.jira_client import JiraClient
@@ -64,11 +64,16 @@ async def run(project_key: str) -> int:
         await jira.aclose()
 
 
+def resolve_project_key(argv: list[str], settings: Settings) -> str:
+    """Key project từ tham số dòng lệnh; không có thì lấy JIRA_DEMO_PROJECT."""
+    return argv[1] if len(argv) > 1 else settings.jira_demo_project
+
+
 def main() -> None:
     # Console Windows mặc định không phải UTF-8; tránh lỗi khi in tiếng Việt.
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
-    project_key = sys.argv[1] if len(sys.argv) > 1 else "SHOP"
+    project_key = resolve_project_key(sys.argv, get_settings())
     sys.exit(asyncio.run(run(project_key)))
 
 

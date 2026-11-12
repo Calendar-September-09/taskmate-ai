@@ -26,6 +26,8 @@ class Settings(BaseSettings):
     jira_story_points_field: str = "customfield_10016"
     jira_sprint_field: str = "customfield_10020"
     jira_flagged_field: str = "customfield_10021"
+    # Project dùng cho script kiểm tra và demo
+    jira_demo_project: str = "SHOP"
 
     # LLM
     llm_api_key: SecretStr = SecretStr("")
