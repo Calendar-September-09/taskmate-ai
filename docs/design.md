@@ -91,6 +91,8 @@ Mỗi Skill là một thư mục có `SKILL.md` (mô tả khi nào dùng + hư�
 
 MCP Server viết bằng MCP Python SDK (FastMCP), chạy riêng tiến trình, giữ Jira API token; Agent chỉ thấy tool, không thấy token.
 
+> Ghi chú triển khai: từ MCP Python SDK 2.x, FastMCP đổi tên thành `MCPServer` (`from mcp.server.mcpserver import MCPServer`). Dự án dùng SDK 2.x, xem `mcp_server/server.py`.
+
 | Tool | Loại | Đầu vào | Đầu ra |
 | --- | --- | --- | --- |
 | `list_projects` | Đọc | — | key, name, các issue type cho phép |

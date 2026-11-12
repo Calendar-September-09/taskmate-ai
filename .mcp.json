@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "taskmate-jira": {
+      "command": "uv",
+      "args": ["run", "python", "-m", "mcp_server.server"],
+      "env": { "JIRA_MODE": "mock" }
+    }
+  }
+}
