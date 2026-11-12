@@ -1,0 +1,44 @@
+[project]
+name = "taskmate-ai"
+version = "0.1.0"
+description = "AI Agent hỗ trợ Scrum Master quản lý công việc trên Jira"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "streamlit",
+    "langgraph",
+    "langgraph-checkpoint-sqlite",
+    "mcp[cli]",
+    "httpx",
+    "pydantic>=2",
+    "pydantic-settings",
+    "anthropic",
+    "langfuse",
+    "apscheduler",
+    "rapidfuzz",
+    "python-dateutil",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "respx",
+    "ruff",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
