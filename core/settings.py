@@ -24,6 +24,8 @@ class Settings(BaseSettings):
     jira_api_token: SecretStr = SecretStr("")
     jira_mode: Literal["mock", "real"] = "mock"
     jira_story_points_field: str = "customfield_10016"
+    jira_sprint_field: str = "customfield_10020"
+    jira_flagged_field: str = "customfield_10021"
 
     # LLM
     llm_api_key: SecretStr = SecretStr("")

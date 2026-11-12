@@ -14,6 +14,8 @@ ENV_VARS = [
     "JIRA_API_TOKEN",
     "JIRA_MODE",
     "JIRA_STORY_POINTS_FIELD",
+    "JIRA_SPRINT_FIELD",
+    "JIRA_FLAGGED_FIELD",
     "LLM_API_KEY",
     "LLM_MODEL_MAIN",
     "LLM_MODEL_FAST",
@@ -46,6 +48,9 @@ def test_defaults() -> None:
     assert settings.tz == ZoneInfo("Asia/Ho_Chi_Minh")
     assert settings.db_path == Path("data/taskmate.db")
     assert settings.jira_api_token.get_secret_value() == ""
+    assert settings.jira_story_points_field == "customfield_10016"
+    assert settings.jira_sprint_field == "customfield_10020"
+    assert settings.jira_flagged_field == "customfield_10021"
 
 
 def test_reads_from_env(monkeypatch: pytest.MonkeyPatch) -> None:

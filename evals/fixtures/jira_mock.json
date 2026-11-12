@@ -1,0 +1,182 @@
+{
+  "_notes": {
+    "reference_now": "Thời điểm 'hiện tại' của dữ liệu giả; test và metrics dùng mốc này thay cho đồng hồ thật.",
+    "SHOP-104": "Dời từ Sprint 11 sang Sprint 12 (changelog đổi Sprint ngày 31/10).",
+    "SHOP-105": "Kẹt ở In Review từ 06/11 (hơn 3 ngày làm việc tính tới 12/11).",
+    "SHOP-106": "Quá hạn: hạn 10/11, vẫn In Progress.",
+    "SHOP-107": "Bị chặn bởi SHOP-105 (chưa Done).",
+    "SHOP-108": "Thêm vào Sprint 12 giữa sprint (07/11).",
+    "SHOP-109": "Chưa có người phụ trách.",
+    "SHOP-110": "Bug mở lại: Done -> In Progress ngày 09/11.",
+    "SHOP-111": "Đánh dấu Flagged ngày 10/11.",
+    "HR-3": "Vào In Review ngày 11/11 (chưa kẹt).",
+    "Thành viên": "SHOP có hai người tên Nam; Lan chỉ thuộc HR; Hà thuộc cả hai."
+  },
+  "base_url": "https://mock-taskmate.atlassian.net",
+  "reference_now": "2026-11-12T09:00:00+07:00",
+  "fields": [
+    {"id": "summary", "name": "Summary", "custom": false},
+    {"id": "description", "name": "Description", "custom": false},
+    {"id": "issuetype", "name": "Issue Type", "custom": false},
+    {"id": "project", "name": "Project", "custom": false},
+    {"id": "assignee", "name": "Assignee", "custom": false},
+    {"id": "priority", "name": "Priority", "custom": false},
+    {"id": "duedate", "name": "Due date", "custom": false},
+    {"id": "labels", "name": "Labels", "custom": false},
+    {"id": "parent", "name": "Parent", "custom": false},
+    {"id": "customfield_10016", "name": "Story point estimate", "custom": true},
+    {"id": "customfield_10020", "name": "Sprint", "custom": true},
+    {"id": "customfield_10021", "name": "Flagged", "custom": true}
+  ],
+  "statuses": {
+    "To Do": "new",
+    "In Progress": "indeterminate",
+    "In Review": "indeterminate",
+    "Done": "done"
+  },
+  "priorities": ["Highest", "High", "Medium", "Low", "Lowest"],
+  "projects": [
+    {
+      "key": "SHOP",
+      "id": "10000",
+      "name": "Shop Online",
+      "issue_types": ["Story", "Task", "Bug", "Sub-task"],
+      "members": ["acc-nam-be", "acc-nam-qa", "acc-duc", "acc-ha"],
+      "board_id": 1
+    },
+    {
+      "key": "HR",
+      "id": "10001",
+      "name": "Nhân sự nội bộ",
+      "issue_types": ["Task", "Sub-task"],
+      "members": ["acc-lan", "acc-ha"],
+      "board_id": 2
+    }
+  ],
+  "users": [
+    {"account_id": "acc-nam-be", "display_name": "Nguyễn Văn Nam", "email": "nam.nguyen@example.com", "role": "Backend"},
+    {"account_id": "acc-nam-qa", "display_name": "Trần Hoài Nam", "email": "nam.tran@example.com", "role": "QA"},
+    {"account_id": "acc-duc", "display_name": "Phạm Minh Đức", "email": "duc.pham@example.com", "role": "Frontend"},
+    {"account_id": "acc-ha", "display_name": "Lê Thu Hà", "email": "ha.le@example.com", "role": "Scrum Master"},
+    {"account_id": "acc-lan", "display_name": "Đỗ Thị Lan", "email": "lan.do@example.com", "role": "HR"}
+  ],
+  "sprints": [
+    {"id": 11, "board_id": 1, "name": "SHOP Sprint 11", "state": "closed", "goal": "Hoàn thiện danh mục sản phẩm và giỏ hàng",
+     "start_date": "2026-10-19T09:00:00+07:00", "end_date": "2026-10-30T17:00:00+07:00", "complete_date": "2026-10-30T17:30:00+07:00"},
+    {"id": 12, "board_id": 1, "name": "SHOP Sprint 12", "state": "active", "goal": "Thanh toán VNPay và lịch sử đơn hàng",
+     "start_date": "2026-11-02T09:00:00+07:00", "end_date": "2026-11-13T17:00:00+07:00"},
+    {"id": 13, "board_id": 1, "name": "SHOP Sprint 13", "state": "future", "goal": null,
+     "start_date": "2026-11-16T09:00:00+07:00", "end_date": "2026-11-27T17:00:00+07:00"},
+    {"id": 21, "board_id": 2, "name": "HR Sprint 5", "state": "closed", "goal": "Chuẩn hóa onboarding",
+     "start_date": "2026-10-19T09:00:00+07:00", "end_date": "2026-10-30T17:00:00+07:00", "complete_date": "2026-10-30T17:00:00+07:00"},
+    {"id": 22, "board_id": 2, "name": "HR Sprint 6", "state": "active", "goal": "Chính sách 2027",
+     "start_date": "2026-11-02T09:00:00+07:00", "end_date": "2026-11-13T17:00:00+07:00"},
+    {"id": 23, "board_id": 2, "name": "HR Sprint 7", "state": "future", "goal": null,
+     "start_date": "2026-11-16T09:00:00+07:00", "end_date": "2026-11-27T17:00:00+07:00"}
+  ],
+  "issues": [
+    {"key": "SHOP-101", "id": "20101", "summary": "Xây dựng trang danh sách sản phẩm", "type": "Story", "status": "Done",
+     "assignee": "acc-duc", "priority": "Medium", "points": 5, "sprints": [11], "created": "2026-10-16T10:00:00+07:00",
+     "changelog": [
+       {"created": "2026-10-20T09:30:00+07:00", "author": "acc-duc", "items": [{"field": "status", "from": "To Do", "to": "In Progress"}]},
+       {"created": "2026-10-24T16:00:00+07:00", "author": "acc-duc", "items": [{"field": "status", "from": "In Progress", "to": "In Review"}]},
+       {"created": "2026-10-27T11:00:00+07:00", "author": "acc-nam-be", "items": [{"field": "status", "from": "In Review", "to": "Done"}]}
+     ]},
+    {"key": "SHOP-102", "id": "20102", "summary": "Xây dựng API giỏ hàng", "type": "Task", "status": "Done",
+     "assignee": "acc-nam-be", "priority": "High", "points": 3, "sprints": [11], "created": "2026-10-16T10:05:00+07:00",
+     "changelog": [
+       {"created": "2026-10-19T10:00:00+07:00", "author": "acc-nam-be", "items": [{"field": "status", "from": "To Do", "to": "In Progress"}]},
+       {"created": "2026-10-23T15:00:00+07:00", "author": "acc-nam-be", "items": [{"field": "status", "from": "In Progress", "to": "In Review"}]},
+       {"created": "2026-10-24T10:00:00+07:00", "author": "acc-duc", "items": [{"field": "status", "from": "In Review", "to": "Done"}]}
+     ]},
+    {"key": "SHOP-103", "id": "20103", "summary": "Sửa lỗi hiển thị giá khi có giảm giá", "type": "Bug", "status": "Done",
+     "assignee": "acc-duc", "priority": "High", "points": 2, "sprints": [11], "created": "2026-10-20T14:00:00+07:00",
+     "changelog": [
+       {"created": "2026-10-21T09:00:00+07:00", "author": "acc-duc", "items": [{"field": "status", "from": "To Do", "to": "In Progress"}]},
+       {"created": "2026-10-22T17:00:00+07:00", "author": "acc-nam-qa", "items": [{"field": "status", "from": "In Progress", "to": "Done"}]}
+     ]},
+    {"key": "SHOP-104", "id": "20104", "summary": "Tích hợp đăng nhập bằng Google", "type": "Story", "status": "In Progress",
+     "assignee": "acc-nam-be", "priority": "Medium", "points": 8, "sprints": [11, 12], "created": "2026-10-16T10:10:00+07:00",
+     "description": "## Mục tiêu\nCho phép khách hàng đăng nhập bằng tài khoản Google.",
+     "changelog": [
+       {"created": "2026-10-22T09:00:00+07:00", "author": "acc-nam-be", "items": [{"field": "status", "from": "To Do", "to": "In Progress"}]},
+       {"created": "2026-10-31T10:00:00+07:00", "author": "acc-ha", "items": [{"field": "Sprint", "from": "SHOP Sprint 11", "to": "SHOP Sprint 11, SHOP Sprint 12"}]}
+     ]},
+    {"key": "SHOP-105", "id": "20105", "summary": "Xây dựng API thanh toán VNPay", "type": "Story", "status": "In Review",
+     "assignee": "acc-nam-be", "priority": "High", "points": 5, "due": "2026-11-13", "sprints": [12], "created": "2026-10-29T10:00:00+07:00",
+     "description": "## Mục tiêu\nCho phép khách hàng thanh toán đơn hàng qua VNPay.\n\n## Acceptance Criteria\n- Given đơn hàng hợp lệ, When gọi API tạo giao dịch, Then trả về URL thanh toán VNPay.",
+     "changelog": [
+       {"created": "2026-11-03T09:00:00+07:00", "author": "acc-nam-be", "items": [{"field": "status", "from": "To Do", "to": "In Progress"}]},
+       {"created": "2026-11-06T16:30:00+07:00", "author": "acc-nam-be", "items": [{"field": "status", "from": "In Progress", "to": "In Review"}]}
+     ]},
+    {"key": "SHOP-106", "id": "20106", "summary": "Xây dựng màn hình giỏ hàng (FE)", "type": "Task", "status": "In Progress",
+     "assignee": "acc-duc", "priority": "Medium", "points": 3, "due": "2026-11-10", "sprints": [12], "created": "2026-10-29T10:10:00+07:00",
+     "changelog": [
+       {"created": "2026-11-04T09:00:00+07:00", "author": "acc-duc", "items": [{"field": "status", "from": "To Do", "to": "In Progress"}]}
+     ]},
+    {"key": "SHOP-107", "id": "20107", "summary": "Viết test E2E luồng thanh toán", "type": "Task", "status": "To Do",
+     "assignee": "acc-nam-qa", "priority": "Medium", "points": 3, "sprints": [12], "created": "2026-10-29T10:20:00+07:00",
+     "blocked_by": ["SHOP-105"], "changelog": []},
+    {"key": "SHOP-108", "id": "20108", "summary": "Sửa lỗi crash khi thêm sản phẩm hết hàng vào giỏ", "type": "Bug", "status": "In Progress",
+     "assignee": "acc-nam-be", "priority": "Highest", "points": 2, "sprints": [12], "created": "2026-11-07T08:45:00+07:00",
+     "changelog": [
+       {"created": "2026-11-07T09:00:00+07:00", "author": "acc-ha", "items": [{"field": "Sprint", "from": null, "to": "SHOP Sprint 12"}]},
+       {"created": "2026-11-07T10:00:00+07:00", "author": "acc-nam-be", "items": [{"field": "status", "from": "To Do", "to": "In Progress"}]}
+     ]},
+    {"key": "SHOP-109", "id": "20109", "summary": "Cấu hình email xác nhận đơn hàng", "type": "Task", "status": "To Do",
+     "assignee": null, "priority": "Low", "points": 2, "sprints": [12], "created": "2026-10-29T10:30:00+07:00", "changelog": []},
+    {"key": "SHOP-110", "id": "20110", "summary": "Sửa lỗi sai tổng tiền khi áp mã giảm giá", "type": "Bug", "status": "In Progress",
+     "assignee": "acc-nam-be", "priority": "High", "points": 3, "sprints": [12], "created": "2026-11-02T11:00:00+07:00",
+     "changelog": [
+       {"created": "2026-11-03T09:30:00+07:00", "author": "acc-nam-be", "items": [{"field": "status", "from": "To Do", "to": "In Progress"}]},
+       {"created": "2026-11-05T15:00:00+07:00", "author": "acc-nam-be", "items": [{"field": "status", "from": "In Progress", "to": "In Review"}]},
+       {"created": "2026-11-06T10:00:00+07:00", "author": "acc-nam-qa", "items": [{"field": "status", "from": "In Review", "to": "Done"}]},
+       {"created": "2026-11-09T14:00:00+07:00", "author": "acc-nam-qa", "items": [{"field": "status", "from": "Done", "to": "In Progress"}]}
+     ]},
+    {"key": "SHOP-111", "id": "20111", "summary": "Tối ưu truy vấn danh sách đơn hàng", "type": "Task", "status": "In Progress",
+     "assignee": "acc-nam-be", "priority": "Medium", "points": 3, "sprints": [12], "flagged": true, "created": "2026-10-29T10:40:00+07:00",
+     "changelog": [
+       {"created": "2026-11-05T09:00:00+07:00", "author": "acc-nam-be", "items": [{"field": "status", "from": "To Do", "to": "In Progress"}]},
+       {"created": "2026-11-10T11:00:00+07:00", "author": "acc-nam-be", "items": [{"field": "Flagged", "from": null, "to": "Impediment"}]}
+     ]},
+    {"key": "SHOP-112", "id": "20112", "summary": "Xây dựng trang lịch sử đơn hàng", "type": "Story", "status": "Done",
+     "assignee": "acc-duc", "priority": "Medium", "points": 5, "sprints": [12], "created": "2026-10-29T10:50:00+07:00",
+     "changelog": [
+       {"created": "2026-11-03T10:00:00+07:00", "author": "acc-duc", "items": [{"field": "status", "from": "To Do", "to": "In Progress"}]},
+       {"created": "2026-11-05T16:00:00+07:00", "author": "acc-duc", "items": [{"field": "status", "from": "In Progress", "to": "In Review"}]},
+       {"created": "2026-11-06T11:00:00+07:00", "author": "acc-nam-be", "items": [{"field": "status", "from": "In Review", "to": "Done"}]}
+     ]},
+    {"key": "SHOP-113", "id": "20113", "summary": "Kiểm thử API giỏ hàng", "type": "Task", "status": "Done",
+     "assignee": "acc-nam-qa", "priority": "Medium", "points": 2, "sprints": [12], "created": "2026-10-29T11:00:00+07:00",
+     "changelog": [
+       {"created": "2026-11-04T09:00:00+07:00", "author": "acc-nam-qa", "items": [{"field": "status", "from": "To Do", "to": "In Progress"}]},
+       {"created": "2026-11-05T17:00:00+07:00", "author": "acc-nam-qa", "items": [{"field": "status", "from": "In Progress", "to": "Done"}]}
+     ]},
+    {"key": "SHOP-114", "id": "20114", "summary": "Đánh giá và bình luận sản phẩm", "type": "Story", "status": "To Do",
+     "assignee": null, "priority": "Medium", "points": 8, "sprints": [13], "created": "2026-11-09T10:00:00+07:00", "changelog": []},
+    {"key": "SHOP-115", "id": "20115", "summary": "Nghiên cứu tích hợp ví MoMo", "type": "Task", "status": "To Do",
+     "assignee": null, "priority": "Low", "points": null, "sprints": [], "created": "2026-11-10T15:00:00+07:00", "changelog": []},
+
+    {"key": "HR-1", "id": "30001", "summary": "Soạn quy trình onboarding nhân viên mới", "type": "Task", "status": "Done",
+     "assignee": "acc-lan", "priority": "Medium", "points": 3, "sprints": [21], "created": "2026-10-16T09:00:00+07:00",
+     "changelog": [
+       {"created": "2026-10-20T09:00:00+07:00", "author": "acc-lan", "items": [{"field": "status", "from": "To Do", "to": "In Progress"}]},
+       {"created": "2026-10-28T16:00:00+07:00", "author": "acc-lan", "items": [{"field": "status", "from": "In Progress", "to": "Done"}]}
+     ]},
+    {"key": "HR-2", "id": "30002", "summary": "Cập nhật chính sách nghỉ phép năm 2027", "type": "Task", "status": "In Progress",
+     "assignee": "acc-lan", "priority": "High", "points": 2, "due": "2026-11-20", "sprints": [22], "created": "2026-10-30T09:00:00+07:00",
+     "changelog": [
+       {"created": "2026-11-04T09:00:00+07:00", "author": "acc-lan", "items": [{"field": "status", "from": "To Do", "to": "In Progress"}]}
+     ]},
+    {"key": "HR-3", "id": "30003", "summary": "Tổ chức khảo sát mức độ hài lòng của nhân viên", "type": "Task", "status": "In Review",
+     "assignee": "acc-ha", "priority": "Medium", "points": 3, "sprints": [22], "created": "2026-10-30T09:10:00+07:00",
+     "changelog": [
+       {"created": "2026-11-03T09:00:00+07:00", "author": "acc-ha", "items": [{"field": "status", "from": "To Do", "to": "In Progress"}]},
+       {"created": "2026-11-11T15:00:00+07:00", "author": "acc-ha", "items": [{"field": "status", "from": "In Progress", "to": "In Review"}]}
+     ]},
+    {"key": "HR-4", "id": "30004", "summary": "Chuẩn bị kế hoạch tuyển dụng quý 1", "type": "Task", "status": "To Do",
+     "assignee": "acc-lan", "priority": "Medium", "points": 5, "sprints": [22], "created": "2026-10-30T09:20:00+07:00", "changelog": []},
+    {"key": "HR-5", "id": "30005", "summary": "Tổng kết đào tạo năm 2026", "type": "Task", "status": "To Do",
+     "assignee": null, "priority": "Low", "points": 3, "sprints": [23], "created": "2026-11-10T09:00:00+07:00", "changelog": []}
+  ]
+}
